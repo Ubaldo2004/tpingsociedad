@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Velocidad y Vacío: El Gran Premio de la Felicidad</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Animación de giro lento */
+    @keyframes spin-slow {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .animate-spin-slow {
+      animation: spin-slow 15s linear infinite;
+    }
+
+    /* Contenedor rueda */
+    .rueda-consumo {
+      position: relative;
+      width: 16rem;  /* 256px */
+      height: 16rem;
+      border: 4px solid #9CA3AF; /* gris */
+      border-radius: 50%;
+      margin: auto;
+      background: #f9fafb;
+      box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    }
+
+    /* Íconos posicionados alrededor */
+    .rueda-consumo div {
+      position: absolute;
+      font-size: 2rem;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    /* Posiciones (centrado y desplazamientos) */
+    .rueda-consumo .top-center {
+      top: 0.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .rueda-consumo .right-center {
+      top: 50%;
+      right: 0.5rem;
+      transform: translateY(-50%);
+    }
+
+    .rueda-consumo .bottom-center {
+      bottom: 0.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .rueda-consumo .left-center {
+      top: 50%;
+      left: 0.5rem;
+      transform: translateY(-50%);
+    }
+
+    .rueda-consumo .top-left {
+      top: 1.5rem;
+      left: 1.5rem;
+    }
+
+    .rueda-consumo .top-right {
+      top: 1.5rem;
+      right: 1.5rem;
+    }
+
+    .rueda-consumo .bottom-left {
+      bottom: 1.5rem;
+      left: 1.5rem;
+    }
+
+    .rueda-consumo .bottom-right {
+      bottom: 1.5rem;
+      right: 1.5rem;
+    }
+
+    /* Opcional: efecto sutil al pasar el mouse */
+    .rueda-consumo:hover {
+      box-shadow: 0 0 20px rgba(156, 163, 175, 0.7);
+    }
+  </style>
+</head>
+<body class="bg-black text-white font-sans">
+
+  <!-- Hero -->
+  <section class="bg-cover bg-center h-screen" style="background-image: url('https://images.unsplash.com/photo-1505843789379-2a5e43b36d04');">
+    <div class="bg-black bg-opacity-60 h-full flex items-center justify-center">
+      <div class="text-center px-4">
+        <h1 class="text-5xl font-bold mb-4">Velocidad y Vacío</h1>
+        <p class="text-xl italic">El Gran Premio de la Felicidad en la era del hiperconsumo</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Collage Visual -->
+  <section class="p-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="relative group">
+      <img src="https://images.unsplash.com/photo-1741889838631-e8a1850854dc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="rounded-2xl shadow-lg transform group-hover:scale-105 transition duration-300" alt="Publicidad de marcas de lujo"/>
+      <div class="absolute bottom-0 bg-gradient-to-t from-black via-transparent to-transparent p-4">
+        <p class="text-sm">La F1 como vitrina de marcas de lujo: relojes, autos, moda. Todo se compra, todo se muestra.</p>
+      </div>
+    </div>
+
+    <div class="relative group">
+      <img src="https://images.unsplash.com/photo-1700770956385-9c0bdf08e314?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Ds" class="rounded-2xl shadow-lg transform group-hover:scale-105 transition duration-300" alt="Piloto de Fórmula 1"/>
+      <div class="absolute bottom-0 bg-gradient-to-t from-black via-transparent to-transparent p-4">
+        <p class="text-sm">Pilotos como íconos globales: la felicidad parece venir con la fama, pero también con la presión.</p>
+      </div>
+    </div>
+
+    <div class="relative group">
+      <img src="https://furinkazandojo.com/wp-content/uploads/2016/06/rapido-significa-lento-pero-sin-pausa.jpg" class="rounded-2xl shadow-lg transform group-hover:scale-105 transition duration-300" alt="Velocidad metáfora"/>
+      <div class="absolute bottom-0 bg-gradient-to-t from-black via-transparent to-transparent p-4">
+        <p class="text-sm">La velocidad como metáfora del deseo moderno: llegar más lejos, más rápido, sin pausa.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rueda de la Fortuna del Consumo -->
+  <section class="bg-white text-black py-12">
+    <div class="max-w-4xl mx-auto text-center mb-8">
+      <h2 class="text-3xl font-bold mb-4">La rueda de la fortuna del hiperconsumo</h2>
+      <p class="text-lg italic">
+        Giramos y giramos, creyendo que en la próxima vuelta encontraremos la felicidad.
+      </p>
+    </div>
+
+    <div class="rueda-consumo animate-spin-slow" aria-label="Rueda de la fortuna del consumo">
+      <div class="top-center" role="img" aria-label="Bolsa de compras">🛍️</div>
+      <div class="right-center" role="img" aria-label="Teléfono móvil">📱</div>
+      <div class="bottom-center" role="img" aria-label="Hamburguesa">🍔</div>
+      <div class="left-center" role="img" aria-label="Isla tropical">🏝️</div>
+      <div class="top-left" role="img" aria-label="Zapatos deportivos">👟</div>
+      <div class="top-right" role="img" aria-label="Cosméticos">💄</div>
+      <div class="bottom-left" role="img" aria-label="Auriculares">🎧</div>
+      <div class="bottom-right" role="img" aria-label="Diamante">💎</div>
+    </div>
+
+    <div class="text-center mt-6 text-gray-700 max-w-3xl mx-auto px-6">
+      <p>
+        La rueda gira constantemente y promete satisfacción en cada ícono: moda, tecnología, viajes, comida rápida, lujo...
+        Pero una vez que creemos haber “ganado”, la rueda ya está girando de nuevo.
+      </p>
+    </div>
+  </section>
+
+  <!-- Texto de reflexión -->
+  <section class="bg-gray-900 p-10 text-lg">
+    <h2 class="text-3xl font-bold mb-4">Una mirada Lipovetskiana a la Fórmula 1</h2>
+    <p class="mb-4">
+      Según Lipovetsky, vivimos en una era de <strong>hiperconsumo emocional</strong>, donde hasta el deporte se convierte en producto. La F1 no es solo velocidad: es publicidad, imagen, deseo, exclusividad.
+    </p>
+    <p class="mb-4 italic text-gray-300">
+      “El hiperconsumo no se limita al gasto material: produce estilos de vida, valores, formas de sensibilidad. Nos promete felicidad a través del espectáculo, la emoción y la personalización constante.”  
+      — <strong>Gilles Lipovetsky</strong>
+    </p>
+    <p>
+      Este collage representa la <strong>paradoja de la felicidad</strong>: más espectáculo, más conexión tecnológica, más fans… pero también más presión, más estrés, más vacío emocional.  
+      Como sociedad, vemos en la F1 un espejo donde lo brillante no siempre es verdadero.
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center bg-black text-gray-400 py-4 text-sm">
+    Inspirado en "La felicidad paradójica" de Gilles Lipovetsky | Producción creativa interdisciplinaria
+  </footer>
+
+</body>
+</html>
